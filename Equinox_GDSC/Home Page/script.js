@@ -8,7 +8,7 @@ let getMovie = () => {
   let movieName = movieNameRef;
   let url = `http://www.omdbapi.com/?t=${movieNameRef.value}&apikey=2a7e05fc`;
   //If input field is empty
-  if (movieName <= 0) {
+  if (movieName.value <= 0) {
     result.innerHTML = `<h3 class="msg">Please Enter A Movie Name</h3>`;
   }
   //If input field is NOT empty
@@ -47,7 +47,7 @@ let getMovie = () => {
         }
         //If movie does NOT exists in database
         else {
-          result.innerHTML = `<h3 class='msg'>{data.Error}</h3>`;
+          result.innerHTML = `<h3 class='msg'>${data.Error}</h3>`;
         }
       })
       //If error occurs
