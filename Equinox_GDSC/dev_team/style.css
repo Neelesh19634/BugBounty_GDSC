@@ -9,7 +9,8 @@
   }
   .row {
     display: flex;
-    flex-wrap: wrap;
+    
+    gap: 1.8vw;
     padding: 2em 1em;
     text-align: center;
   }
@@ -31,6 +32,10 @@
     cursor: pointer;
     transition: 0.3s;
     background-color: #ffffff;
+  }
+  .card:hover{
+    background-image:linear-gradient(to bottom,#6146EA,#7257ED,#6B52C9) ;
+    color: white;
   }
   .card .img-container {
     width: 8em;
@@ -65,16 +70,22 @@
     color: inherit;
     font-size: 1.4em;
   }
-  @media screen and (min-width: 768px) {
+  @media screen and (max-width: 768px) {
     section {
       padding: 1em 7em;
     }
+   
   }
-  @media screen and (min-width: 992px) {
+  @media screen and (max-width: 992px) {
     section {
       padding: 1em;
     }
     .card {
       padding: 5em 1em;
+      
     }
+    .row{
+      flex-wrap: wrap;
+    }
+    
   }
